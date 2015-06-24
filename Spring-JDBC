@@ -1,0 +1,40 @@
+JDBC 
+It allows multiple implementations to exist and be used by the same application. The API provides a mechanism for dynamically loading the correct Java packages and registering them with the   JDBC Driver Manager which is used as a connection factory .
+
+JDBC represents statements using one of the following classes:
+
+•	Statement – the statement is sent to the database server each and every time.
+•	Prepared-Statement – the statement is cached and then the execution path is pre-determined on the database server allowing it to be executed multiple times in an efficient manner.
+•	Callable-Statement – used for executing stored procedures on the database.
+Update statements such as INSERT, UPDATE and DELETE return an update count that indicates how many rows ((a set of related data)) were affected in the database.
+
+When a Java application needs a database connection, one of the  
+DriverManager.getConnection() methods is used to create a JDBC connection
+
+Connection con = DriverManager.getConnection("jdbc:somejdbcvendor:other data needed by some jdbc vendor"),
+                                             "myLogin",
+                                             "myPassword");
+ 
+
+Caching 
+Many applications today are being developed, deployed on multi-tier environments:
+•	Browser-based clients
+•	Web application servers 
+•	Backend databases
+
+These applications need to generate web pages on-demand by talking to backend databases because of their dynamic nature, making middle-tier database caching an effective approach to achieve high scalability and performance.
+As commercial databases are heavy weight, it is not practically feasible to have the application and the database at the same host.
+Spring is the most popular application development framework for enterprise Java. Millions of developers around the world use Spring Framework to create high performing, easily testable, reusable code.
+Spring framework is an open source Java platform and it was initially written by Rod Johnson and was first released under the Apache 2.0 license in June 2003.
+Spring is lightweight when it comes to size and transparency. The basic version of spring framework is around 2MB.
+The core features of the Spring Framework can be used in developing any Java application, but there are extensions for building web applications on top of the Java EE platform. Spring framework targets to make J2EE development easier to use and promote good programming practice by enabling a POJO-based programming model.
+Benefits of Using Spring Framework:
+Following is the list of few of the great benefits of using Spring Framework:
+•	Spring enables developers to develop enterprise-class applications using POJOs. The benefit of using only POJOs, “Plain old java object” there is no requirement for them to implement certain interfaces or extend from special classes, is that you do not need an EJB container product such as an application server but you have the option of using only a robust servlet container such as Tomcat or some commercial product.
+•	Spring is organized in a modular fashion. Even though the number of packages and classes are substantial, you have to worry only about ones you need and ignore the rest.
+•	Spring does not reinvent the wheel instead; it truly makes use of some of the existing technologies like several ORM frameworks, logging frameworks, JEE, Quartz and JDK timers, other view technologies.
+•	Testing an application written with spring is simple because environment-dependent code is moved into this framework. Furthermore, by using JavaBean-style POJOs, it becomes easier to use dependency injection for injecting test data.
+•	Spring's web framework is a well-designed web MVC framework, which provides a great alternative to web frameworks such as Struts or other over engineered or less popular web frameworks.
+•	Spring provides a convenient API to translate technology-specific exceptions (thrown by JDBC, Hibernate, or JDO, JDO persistent objects are ordinary Java programming language classes POJO`s) into consistent, unchecked exceptions.
+•	Lightweight IoC containers tend to be lightweight, especially when compared to EJB; EJB is a server-side software component that encapsulates the business logic of an application, containers, for example. An EJB web container provides a runtime environment for web related software components, including computer security, Java servlet lifecycle management, and transaction processing, and other web services. This is beneficial for developing and deploying applications on computers with limited memory and CPU resources.
+•	Spring provides a consistent transaction management interface that can scale down to a local transaction (using a single database, for example) and scale up to global transactions (using JTA, for example).
